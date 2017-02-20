@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axe-Vt-aiz">
+                                <rect key="frame" x="17" y="28" width="45" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play" image="ButtonPlay.png">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="dTz-BC-9WR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6B-F8-zVJ">
+                                <rect key="frame" x="83" y="28" width="43" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop" image="ButtonStop.png"/>
+                                <connections>
+                                    <action selector="stopTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="meL-fO-zYE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-WS-xPj">
+                                <rect key="frame" x="151" y="24" width="63" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Record" image="ButtonRec.png"/>
+                                <connections>
+                                    <action selector="recordPauseTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="1dO-Cs-sbN"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HMu-1J-aZJ">
+                                <rect key="frame" x="233" y="34" width="136" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderVolumeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="RvX-3Q-qV5"/>
+                                </connections>
+                            </slider>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dgb-Vy-VjC">
+                                <rect key="frame" x="27" y="82" width="340" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sq7-p7-KIB">
+                                <rect key="frame" x="17" y="105" width="343" height="542"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="FFX-k9-Hvl">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="542"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7J-eT-MVG">
+                                            <rect key="frame" x="8" y="26" width="106" height="105"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="ButtonSnare.png"/>
+                                            <connections>
+                                                <action selector="Button1Sound:" destination="BYZ-38-t0r" eventType="touchDown" id="G5Z-fB-Syc"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxR-hr-0P8">
+                                            <rect key="frame" x="237" y="26" width="98" height="104"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="ButtonKickDrum.png"/>
+                                            <connections>
+                                                <action selector="Button3Sound:" destination="BYZ-38-t0r" eventType="touchDown" id="PZZ-jS-pPy"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNe-VC-CIq">
+                                            <rect key="frame" x="124" y="140" width="102" height="99"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="ButtonClap.png"/>
+                                            <connections>
+                                                <action selector="Button4Sound:" destination="BYZ-38-t0r" eventType="touchDown" id="MXc-9t-Vdg"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C4-Ka-Eby">
+                                            <rect key="frame" x="8" y="142" width="106" height="99"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="ButtonTomsDrum.png"/>
+                                            <connections>
+                                                <action selector="Button5Sound:" destination="BYZ-38-t0r" eventType="touchDown" id="fr5-Gj-Olr"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWc-x7-XBo">
+                                            <rect key="frame" x="124" y="26" width="102" height="105"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Jump" image="ButtonHiHats.png"/>
+                                            <connections>
+                                                <action selector="Button2Sound:" destination="BYZ-38-t0r" eventType="touchDown" id="cS7-CD-BgE"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="8"/>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="myRecProg" destination="Dgb-Vy-VjC" id="xmr-Yv-MyR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413.60000000000002" y="-63.418290854572717"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ButtonClap.png" width="167" height="167"/>
+        <image name="ButtonHiHats.png" width="180" height="180"/>
+        <image name="ButtonKickDrum.png" width="180" height="180"/>
+        <image name="ButtonPlay.png" width="128" height="128"/>
+        <image name="ButtonRec.png" width="128" height="128"/>
+        <image name="ButtonSnare.png" width="180" height="180"/>
+        <image name="ButtonStop.png" width="128" height="128"/>
+        <image name="ButtonTomsDrum.png" width="167" height="167"/>
+    </resources>
+</document>
